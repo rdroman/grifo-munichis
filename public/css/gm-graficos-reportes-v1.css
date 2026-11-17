@@ -1,0 +1,30 @@
+/* Reportes interactivos Grifo Munichis, añadido aditivamente. */
+.gm-graficos-wrapper{margin:12px 0 18px;padding:16px 18px;background:#fff;border:1px solid #dce8e1;border-radius:13px;box-shadow:0 2px 9px #143d1c0b}
+.gm-graficos-cabecera{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.gm-graficos-cabecera h2{font-size:1.04rem;font-weight:800;margin:2px 0;color:#163d2a}
+.gm-graficos-cabecera p{color:#536a61;font-size:.78rem;margin:0}
+.gm-grafico-sello{padding:5px 9px;border-radius:15px;background:#e3f5e9;color:#176d3e;font-size:.72rem;font-weight:700}
+.gm-grafico-filtros{display:flex;flex-wrap:wrap;gap:10px 12px;padding:12px;background:#f5faf7;border:1px solid #e1eee5;border-radius:10px;margin-bottom:14px}
+.gm-grafico-campo{display:flex;flex-direction:column;gap:5px;flex:1 1 155px;min-width:130px;max-width:280px}
+.gm-grafico-campo span{font-size:.7rem;font-weight:700;color:#315144}
+.gm-grafico-campo select{font:inherit;font-size:.83rem;min-height:34px;width:100%;padding:6px 10px;border:1px solid #c8d8d0;border-radius:8px;background:white;color:#233d32;max-width:100%;cursor:pointer}
+.gm-grafico-campo select:focus{outline:2px solid #187448;outline-offset:1px}
+.gm-grafico-paneles{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.gm-grafico-panel{min-width:0;border:1px solid #e0e9e4;border-radius:10px;padding:13px;background:#fff}
+.gm-grafico-panel-cabecera{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.gm-grafico-panel h3{margin:0;color:#173e29;font-size:.94rem;font-weight:800}
+.gm-grafico-panel-cabecera p{margin:4px 0 0;color:#65756c;font-size:.71rem}
+.gm-grafico-desplazar{overflow-x:auto;max-width:100%;margin:3px 0 9px;scrollbar-color:#b2cbb8 #eaf3ed}
+.gm-grafico-desplazar svg{display:block;max-width:none;height:330px}
+.gm-grafico-eje{font:11px system-ui,Arial,sans-serif;fill:#536759}
+.gm-grafico-leyenda{display:flex;gap:6px 14px;flex-wrap:wrap;color:#425e4d;font-size:.73rem}
+.gm-grafico-leyenda span{display:inline-flex;gap:6px;align-items:center;max-width:100%;overflow-wrap:anywhere}
+.gm-grafico-leyenda i{display:inline-block;flex:0 0 11px;width:11px;height:11px;border-radius:50%}
+.gm-grafico-indicadores{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.gm-grafico-indicadores>div{flex:1 1 140px;min-width:125px;background:#f6faf7;border:1px solid #e6eee8;border-radius:8px;padding:9px 11px;display:flex;flex-direction:column;gap:3px}
+.gm-grafico-indicadores small{font-size:.69rem;color:#476859}
+.gm-grafico-indicadores b{font-size:.86rem;color:#153e2b;font-variant-numeric:tabular-nums}
+.gm-grafico-nota,.gm-grafico-advertencia{font-size:.75rem;line-height:1.5;color:#57705f;margin:12px 1px 0}
+.gm-grafico-advertencia{color:#a35d12}
+.gm-sin-datos{background:#f6f9f7;padding:20px 12px;border-radius:8px;color:#5f6f64;text-align:center;font-size:.88rem}
+@media(max-width:640px){.gm-graficos-wrapper{padding:12px 10px}.gm-grafico-filtros{gap:9px}.gm-grafico-campo{flex-basis:145px;max-width:none}.gm-grafico-panel{padding:9px}.gm-graficos-cabecera{align-items:flex-start;flex-wrap:wrap}}

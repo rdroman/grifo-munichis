@@ -1,0 +1,903 @@
+/* Grifo Munichis - UI directa y compacta v2.0 - 25/09/2026 */
+
+.gm-encabezado-directo{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:14px!important;
+}
+.gm-encabezado-directo h1{margin-bottom:0!important}
+.gm-tarjeta-compacta{padding:16px!important}
+.gm-tarjeta-compacta .tarjeta-cabecera{margin-bottom:12px!important}
+.gm-tarjeta-compacta .tarjeta-cabecera h2{margin-bottom:0!important}
+
+.gm-formulario-compacto .rejilla-campos{
+    gap:12px 16px!important;
+}
+.gm-formulario-compacto .campo-formulario{
+    gap:5px!important;
+}
+.gm-formulario-compacto textarea{
+    min-height:58px!important;
+    resize:vertical;
+}
+.gm-formulario-compacto input[readonly],
+.gm-formulario-compacto input:disabled,
+.gm-form-tanque-compacto input[readonly]{
+    background:#f7f8f7;
+}
+
+.gm-insignia-corte{
+    display:inline-flex;
+    margin-top:7px;
+}
+
+.gm-metricas-clicables .gm-card-link,
+.gm-card-link{
+    color:inherit;
+    text-decoration:none;
+    transition:transform .15s ease, box-shadow .15s ease;
+}
+.gm-card-link:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 24px rgba(15,23,42,.08);
+}
+.gm-mini-desglose{
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px 10px;
+    margin-top:7px;
+    font-size:.78rem;
+    line-height:1.2;
+    color:#536159;
+}
+.gm-mini-desglose span{
+    white-space:nowrap;
+}
+.gm-metrica-contexto{
+    display:block;
+    margin-top:4px;
+    color:#66736b;
+    font-size:.8rem;
+}
+
+/* Tanques */
+.gm-rejilla-tanques-compacta{
+    gap:12px!important;
+    margin-bottom:14px!important;
+}
+.gm-tanque-resumen{
+    padding:15px!important;
+    gap:9px!important;
+}
+.gm-tanque-identidad{
+    min-width:0;
+}
+.gm-tanque-identidad h2{
+    margin:5px 0 0!important;
+    font-size:1rem!important;
+}
+.gm-tanque-identidad small{
+    display:block;
+    margin-top:2px;
+}
+.gm-tanque-saldo{
+    font-size:1.05rem;
+}
+
+.gm-form-tanque-compacto{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(150px,1fr));
+    gap:11px 14px;
+    align-items:end;
+}
+.gm-form-tanque-compacto .campo-formulario{
+    min-width:0;
+    gap:5px;
+}
+.gm-desglose-salidas{
+    grid-column:1 / -1;
+    border:1px solid #dde4df;
+    border-radius:10px;
+    padding:9px 12px;
+    background:#fafbfa;
+}
+.gm-desglose-salidas summary{
+    cursor:pointer;
+    font-weight:700;
+    color:#405047;
+}
+.gm-desglose-salidas-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(150px,1fr));
+    gap:12px;
+    margin-top:11px;
+}
+.gm-acciones-tanque{
+    grid-column:1 / -1;
+    display:flex;
+    justify-content:flex-end;
+}
+.gm-salida-detalle{
+    margin-top:2px;
+    color:#748078;
+    font-size:.72rem;
+    white-space:nowrap;
+}
+
+/* Reportes */
+.gm-filtro-fechas-cabecera{
+    display:flex;
+    align-items:end;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.gm-filtro-fechas-cabecera .campo-formulario{
+    gap:4px;
+    min-width:145px;
+}
+.gm-filtro-fechas-cabecera label{
+    font-size:.74rem;
+}
+.gm-grid-reportes{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(220px,1fr));
+    gap:14px;
+}
+.gm-reporte-card{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:155px;
+    color:inherit;
+    text-decoration:none;
+    transition:transform .15s ease, box-shadow .15s ease;
+}
+.gm-reporte-card:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 24px rgba(15,23,42,.08);
+}
+.gm-reporte-card h2{
+    margin:5px 0 6px!important;
+    font-size:1.02rem!important;
+}
+.gm-reporte-card p{
+    margin:0;
+    color:#68756d;
+    font-size:.82rem;
+    line-height:1.35;
+}
+.gm-reporte-card-pie{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:12px;
+    margin-top:14px;
+}
+.gm-reporte-valor{
+    font-size:1.08rem;
+}
+.gm-ver-detalle{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    font-size:.78rem;
+    font-weight:700;
+}
+.gm-resumen-combustibles{
+    margin-bottom:14px;
+}
+.gm-productos-resumen{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(180px,1fr));
+    gap:10px;
+}
+.gm-producto-chip{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:11px 12px;
+    border:1px solid #dce4df;
+    border-radius:10px;
+    color:inherit;
+    text-decoration:none;
+    background:#fff;
+}
+.gm-producto-chip div{
+    min-width:0;
+}
+.gm-producto-chip span{
+    display:block;
+    margin-top:2px;
+    color:#6d786f;
+    font-size:.75rem;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.gm-productos-detalle{
+    margin-bottom:14px;
+}
+.gm-producto-resumen-card{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:13px 14px!important;
+}
+.gm-producto-resumen-card .numero small{
+    display:block;
+    margin-top:2px;
+    color:#6d786f;
+}
+.gm-descripcion-reporte{
+    margin-top:5px!important;
+    margin-bottom:0!important;
+    max-width:720px;
+}
+
+/* Supervisor */
+.gm-dashboard-supervisor-grid{
+    display:grid;
+    grid-template-columns:minmax(0,2fr) minmax(260px,1fr);
+    gap:14px;
+    margin-top:14px;
+}
+.gm-lista-tanques-supervisor{
+    display:grid;
+    gap:8px;
+}
+.gm-tanque-fila{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    padding:10px 0;
+    border-bottom:1px solid #edf0ee;
+}
+.gm-tanque-fila:last-child{border-bottom:0}
+.gm-tanque-fila span,
+.gm-tanque-fila small{
+    display:block;
+    color:#6e7a72;
+    font-size:.76rem;
+}
+
+/* Eliminación administrativa de caja */
+.gm-caja-admin-eliminar{
+    margin-top:14px;
+}
+.gm-eliminar-detalle{
+    display:inline-block;
+    text-align:left;
+    position:relative;
+}
+.gm-eliminar-detalle > summary{
+    list-style:none;
+    cursor:pointer;
+}
+.gm-eliminar-detalle > summary::-webkit-details-marker{
+    display:none;
+}
+.boton-peligro{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #dc2626!important;
+    background:#fff!important;
+    color:#b91c1c!important;
+}
+.boton-peligro:hover{
+    background:#fef2f2!important;
+}
+.gm-form-eliminar-caja{
+    width:min(360px,calc(100vw - 48px));
+    margin-top:8px;
+    padding:12px;
+    border:1px solid #e3e8e5;
+    border-radius:10px;
+    background:#fff;
+    box-shadow:0 10px 28px rgba(15,23,42,.12);
+}
+.gm-form-eliminar-caja label{
+    display:block;
+    margin-bottom:5px;
+    font-size:.78rem;
+    font-weight:700;
+}
+.gm-form-eliminar-caja input{
+    width:100%;
+}
+.gm-eliminar-acciones{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:9px;
+}
+
+/* Tablas más densas solo en vistas del parche */
+.gm-tarjeta-compacta .tabla-datos th,
+.gm-tarjeta-compacta .tabla-datos td{
+    padding-top:9px!important;
+    padding-bottom:9px!important;
+}
+
+@media (max-width:1100px){
+    .gm-grid-reportes{grid-template-columns:repeat(2,minmax(220px,1fr))}
+    .gm-form-tanque-compacto{grid-template-columns:repeat(2,minmax(160px,1fr))}
+    .gm-productos-resumen{grid-template-columns:repeat(2,minmax(180px,1fr))}
+}
+@media (max-width:760px){
+    .gm-encabezado-directo{
+        align-items:stretch;
+        flex-direction:column;
+    }
+    .gm-filtro-fechas-cabecera{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+    .gm-filtro-fechas-cabecera .boton{
+        grid-column:1 / -1;
+    }
+    .gm-grid-reportes,
+    .gm-productos-resumen,
+    .gm-dashboard-supervisor-grid,
+    .gm-form-tanque-compacto,
+    .gm-desglose-salidas-grid{
+        grid-template-columns:1fr;
+    }
+    .gm-acciones-tanque,
+    .gm-desglose-salidas{
+        grid-column:1;
+    }
+}
+
+/* ========================================================================
+   AJUSTE UI v2.1 - Tanques, Caja y Reportes - 25/09/2026
+   ======================================================================== */
+
+/* ---------- Tanques: más compactos y legibles ---------- */
+.gm-tanque-identidad h2{
+    margin-top:6px!important;
+    font-size:1.02rem!important;
+    line-height:1.2;
+}
+.gm-tanque-resumen > small{
+    font-size:.76rem!important;
+    color:#66736b;
+}
+.gm-form-tanque-compacto{
+    grid-template-columns:minmax(210px,270px) repeat(3,minmax(132px,158px));
+    gap:8px 10px;
+    justify-content:start;
+    align-items:end;
+}
+.gm-form-tanque-compacto .campo-formulario{
+    gap:4px;
+}
+.gm-form-tanque-compacto .campo-formulario label{
+    font-size:11.5px;
+}
+.gm-form-tanque-compacto .campo-formulario input,
+.gm-form-tanque-compacto .campo-formulario select{
+    min-height:36px;
+    height:36px;
+    padding:6px 9px;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:560;
+    font-variant-numeric:tabular-nums;
+}
+.gm-form-tanque-compacto input[readonly]{
+    color:#34443a;
+    background:#f4f7f5;
+}
+.gm-desglose-salidas{
+    max-width:768px;
+    padding:7px 10px;
+    border-radius:8px;
+}
+.gm-desglose-salidas summary{
+    font-size:13px;
+}
+.gm-desglose-salidas-grid{
+    grid-template-columns:repeat(3,158px);
+    gap:10px;
+    margin-top:9px;
+}
+.gm-acciones-tanque{
+    max-width:768px;
+}
+.gm-tabla-tanques{
+    font-size:13.5px;
+}
+.gm-tabla-tanques th{
+    font-size:10.5px;
+    padding:9px 8px!important;
+}
+.gm-tabla-tanques td{
+    padding:10px 8px!important;
+}
+.gm-tabla-tanques th:nth-child(1),
+.gm-tabla-tanques td:nth-child(1){width:92px}
+.gm-tabla-tanques th:nth-child(2),
+.gm-tabla-tanques td:nth-child(2){width:150px}
+.gm-tabla-tanques th:nth-child(3),
+.gm-tabla-tanques td:nth-child(3),
+.gm-tabla-tanques th:nth-child(5),
+.gm-tabla-tanques td:nth-child(5),
+.gm-tabla-tanques th:nth-child(6),
+.gm-tabla-tanques td:nth-child(6),
+.gm-tabla-tanques th:nth-child(7),
+.gm-tabla-tanques td:nth-child(7){width:112px}
+.gm-tabla-tanques th:nth-child(4),
+.gm-tabla-tanques td:nth-child(4){width:255px}
+.gm-tabla-tanques td:nth-child(2) strong{
+    display:inline-block;
+    margin-right:5px;
+}
+.gm-tabla-tanques td:nth-child(2) span{
+    color:#58665d;
+}
+.gm-salida-detalle{
+    margin-top:3px;
+    color:#5e6d63;
+    font-size:11.5px;
+    font-weight:600;
+    line-height:1.3;
+}
+
+/* ---------- Caja: acciones por fila y modal ---------- */
+.gm-col-acciones,
+.gm-celda-acciones{
+    width:190px;
+    min-width:190px;
+}
+.gm-acciones-caja{
+    justify-content:flex-end;
+    gap:7px;
+}
+.gm-boton-tabla{
+    min-height:32px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    border:1px solid #d8dfdb;
+    border-radius:8px;
+    padding:6px 10px;
+    background:#fff;
+    color:#33443a;
+    font:inherit;
+    font-size:11.5px;
+    font-weight:750;
+    line-height:1;
+    text-decoration:none;
+    cursor:pointer;
+    transition:background .15s ease,border-color .15s ease,color .15s ease,transform .15s ease;
+}
+.gm-boton-tabla svg{
+    width:15px;
+    height:15px;
+    fill:currentColor;
+}
+.gm-boton-tabla:hover{
+    transform:translateY(-1px);
+}
+.gm-boton-editar:hover{
+    border-color:#9dccab;
+    background:#f1faf4;
+    color:#08752b;
+}
+.gm-boton-eliminar{
+    border-color:#f0c5c5;
+    color:#b42318;
+}
+.gm-boton-eliminar:hover{
+    border-color:#e99a95;
+    background:#fff5f4;
+    color:#991b1b;
+}
+.gm-modal-eliminar-caja{
+    width:min(500px,calc(100vw - 28px));
+}
+.gm-modal-eliminar-caja > form{
+    padding:22px;
+}
+.gm-modal-caja-cabecera{
+    margin-bottom:14px;
+}
+.gm-modal-cerrar{
+    width:34px;
+    height:34px;
+    display:grid;
+    place-items:center;
+    flex:0 0 auto;
+    border:1px solid #e1e6e3;
+    border-radius:9px;
+    background:#fff;
+    color:#647068;
+    font-size:24px;
+    line-height:1;
+    cursor:pointer;
+}
+.gm-modal-cerrar:hover{
+    color:#1f2937;
+    background:#f5f7f6;
+}
+.gm-modal-aviso{
+    display:grid;
+    grid-template-columns:34px 1fr;
+    gap:11px;
+    margin-bottom:16px;
+    padding:12px 13px;
+    border:1px solid #f3c7c4;
+    border-radius:10px;
+    background:#fff7f6;
+    color:#7f1d1d;
+}
+.gm-modal-aviso svg{
+    width:25px;
+    height:25px;
+    fill:currentColor;
+}
+.gm-modal-aviso strong{
+    display:block;
+    font-size:13.5px;
+}
+.gm-modal-aviso p{
+    margin:3px 0 0;
+    color:#7c3c39;
+    font-size:12px;
+    line-height:1.45;
+}
+.gm-campo-motivo-eliminar input{
+    font-size:14px;
+}
+.gm-modal-acciones{
+    display:flex;
+    justify-content:flex-end;
+    gap:9px;
+    margin-top:18px;
+}
+.gm-boton-confirmar-eliminar{
+    border:1px solid #b42318!important;
+    background:#b42318!important;
+    color:#fff!important;
+}
+.gm-boton-confirmar-eliminar:hover{
+    background:#991b1b!important;
+}
+
+/* ---------- Reportes: jerarquía, categorías e iconos ---------- */
+.gm-reportes-encabezado{
+    margin-bottom:16px!important;
+}
+.gm-reportes-encabezado .texto-secundario{
+    margin:5px 0 0;
+}
+.gm-filtro-reportes{
+    padding:8px;
+    border:1px solid #e1e7e3;
+    border-radius:11px;
+    background:#fff;
+}
+.gm-filtro-reportes .campo-formulario{
+    min-width:138px;
+}
+.gm-filtro-reportes input{
+    min-height:36px;
+    padding:6px 9px;
+    font-size:12.5px;
+}
+.gm-resumen-combustibles--nuevo{
+    border:1px solid #dfe7e2;
+    box-shadow:0 5px 18px rgba(15,23,42,.045);
+}
+.gm-reportes-seccion-cabecera{
+    align-items:center;
+}
+.gm-enlace-detalle-superior{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    color:#08752b;
+    font-size:12px;
+    font-weight:800;
+    text-decoration:none;
+}
+.gm-productos-resumen--color{
+    gap:12px;
+}
+.gm-producto-chip{
+    position:relative;
+    overflow:hidden;
+    min-height:82px;
+    padding:13px 14px 16px;
+    border-color:var(--gm-comborde,#dce4df);
+    background:var(--gm-combfondo,#fff);
+}
+.gm-producto-chip:hover{
+    border-color:var(--gm-combacento,#08752b);
+    box-shadow:0 6px 18px rgba(15,23,42,.07);
+}
+.gm-producto-chip-identidad{
+    display:grid;
+    gap:3px;
+}
+.gm-producto-codigo{
+    display:inline-flex;
+    width:max-content;
+    align-items:center;
+    min-height:21px;
+    padding:2px 7px;
+    border-radius:999px;
+    background:var(--gm-combsuave,#eaf6ed);
+    color:var(--gm-combacento,#08752b);
+    font-size:10px!important;
+    font-weight:850;
+    letter-spacing:.04em;
+}
+.gm-producto-chip-identidad strong{
+    font-size:13px;
+}
+.gm-producto-chip-metrica{
+    min-width:120px;
+    text-align:right;
+}
+.gm-producto-chip-metrica b{
+    display:block;
+    font-size:15px;
+    font-variant-numeric:tabular-nums;
+}
+.gm-producto-chip-metrica span{
+    display:block;
+    margin-top:2px;
+    color:#68756d;
+    font-size:10.5px;
+}
+.gm-producto-chip-barra{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:4px;
+    background:rgba(15,23,42,.06);
+}
+.gm-producto-chip-barra i{
+    display:block;
+    height:100%;
+    background:var(--gm-combacento,#08752b);
+}
+.gm-producto-chip--g84{
+    --gm-combacento:#15803d;
+    --gm-combsuave:#dcfce7;
+    --gm-combfondo:#f6fff8;
+    --gm-comborde:#c9edd3;
+}
+.gm-producto-chip--regular{
+    --gm-combacento:#2563eb;
+    --gm-combsuave:#dbeafe;
+    --gm-combfondo:#f7faff;
+    --gm-comborde:#cbdcfb;
+}
+.gm-producto-chip--b5{
+    --gm-combacento:#c47a00;
+    --gm-combsuave:#fef3c7;
+    --gm-combfondo:#fffdf5;
+    --gm-comborde:#f4dea4;
+}
+.gm-reportes-grupos{
+    display:grid;
+    gap:20px;
+    margin-top:18px;
+}
+.gm-grupo-reportes{
+    --gm-grupo:#08752b;
+    --gm-grupo-suave:#eaf6ed;
+}
+.gm-grupo-reportes--finanzas{
+    --gm-grupo:#2563eb;
+    --gm-grupo-suave:#eaf1ff;
+}
+.gm-grupo-reportes--inventario{
+    --gm-grupo:#c26a00;
+    --gm-grupo-suave:#fff3df;
+}
+.gm-grupo-reportes--mercado{
+    --gm-grupo:#7c3aed;
+    --gm-grupo-suave:#f3eefe;
+}
+.gm-grupo-reportes-cabecera{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+    padding-left:2px;
+}
+.gm-grupo-marca{
+    width:5px;
+    height:36px;
+    flex:0 0 auto;
+    border-radius:999px;
+    background:var(--gm-grupo);
+}
+.gm-grupo-reportes-cabecera h2{
+    margin:0;
+    color:#17221b;
+    font-size:15px;
+}
+.gm-grupo-reportes-cabecera p{
+    margin:2px 0 0;
+    color:#718078;
+    font-size:11px;
+}
+.gm-grid-reportes{
+    grid-template-columns:repeat(4,minmax(190px,1fr));
+    gap:12px;
+}
+.gm-reporte-card{
+    --gm-acento:var(--gm-grupo,#08752b);
+    --gm-suave:var(--gm-grupo-suave,#eaf6ed);
+    position:relative;
+    min-height:176px;
+    overflow:hidden;
+    padding:15px!important;
+    border:1px solid #e0e6e2;
+    border-top:3px solid var(--gm-acento);
+    border-radius:13px;
+    background:#fff;
+}
+.gm-reporte-card::after{
+    content:"";
+    position:absolute;
+    top:-34px;
+    right:-34px;
+    width:92px;
+    height:92px;
+    border-radius:50%;
+    background:var(--gm-suave);
+    opacity:.72;
+    pointer-events:none;
+}
+.gm-reporte-card:hover{
+    transform:translateY(-2px);
+    border-color:var(--gm-acento);
+    box-shadow:0 10px 26px rgba(15,23,42,.09);
+}
+.gm-reporte-card-superior{
+    position:relative;
+    z-index:1;
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:10px;
+}
+.gm-reporte-icono{
+    width:38px;
+    height:38px;
+    display:grid;
+    place-items:center;
+    flex:0 0 auto;
+    border-radius:10px;
+    background:var(--gm-suave);
+    color:var(--gm-acento);
+}
+.gm-reporte-icono-svg{
+    width:21px;
+    height:21px;
+}
+.gm-reporte-abrir{
+    position:relative;
+    z-index:1;
+    color:var(--gm-acento);
+    font-size:20px;
+    font-weight:800;
+}
+.gm-reporte-card-cuerpo{
+    margin-top:12px;
+}
+.gm-reporte-card h3{
+    margin:0 0 5px;
+    color:#17221b;
+    font-size:14.5px;
+    line-height:1.25;
+}
+.gm-reporte-card p{
+    min-height:32px;
+    color:#6a776f;
+    font-size:11.5px;
+    line-height:1.4;
+}
+.gm-reporte-card-pie{
+    align-items:center;
+    margin-top:13px;
+    padding-top:11px;
+    border-top:1px solid #edf1ee;
+}
+.gm-reporte-valor{
+    color:#17221b;
+    font-size:15px;
+    font-variant-numeric:tabular-nums;
+}
+.gm-ver-detalle{
+    color:var(--gm-acento);
+    font-size:11px;
+    font-weight:800;
+}
+/* Acentos específicos dentro de cada familia */
+.gm-reporte-card--ventas{--gm-acento:#15803d;--gm-suave:#dcfce7}
+.gm-reporte-card--galones{--gm-acento:#047857;--gm-suave:#d1fae5}
+.gm-reporte-card--trabajadores{--gm-acento:#0f766e;--gm-suave:#ccfbf1}
+.gm-reporte-card--extraordinarios{--gm-acento:#c2410c;--gm-suave:#ffedd5}
+.gm-reporte-card--caja{--gm-acento:#1d4ed8;--gm-suave:#dbeafe}
+.gm-reporte-card--creditos{--gm-acento:#4338ca;--gm-suave:#e0e7ff}
+.gm-reporte-card--descuentos{--gm-acento:#0369a1;--gm-suave:#e0f2fe}
+.gm-reporte-card--gastos{--gm-acento:#b91c1c;--gm-suave:#fee2e2}
+.gm-reporte-card--compras{--gm-acento:#b45309;--gm-suave:#fef3c7}
+.gm-reporte-card--tanques{--gm-acento:#c2410c;--gm-suave:#ffedd5}
+.gm-reporte-card--conciliacion{--gm-acento:#4d7c0f;--gm-suave:#ecfccb}
+.gm-reporte-card--precios{--gm-acento:#7c3aed;--gm-suave:#ede9fe}
+.gm-reporte-card--competencia{--gm-acento:#a21caf;--gm-suave:#fae8ff}
+
+.gm-reporte-detalle-encabezado{
+    --gm-acento:#08752b;
+    --gm-suave:#eaf6ed;
+    padding:12px 14px;
+    border:1px solid #e0e6e2;
+    border-left:4px solid var(--gm-acento);
+    border-radius:12px;
+    background:linear-gradient(90deg,var(--gm-suave),#fff 34%);
+}
+.gm-reporte-detalle-titulo{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    margin-top:8px;
+}
+.gm-reporte-icono--grande{
+    width:44px;
+    height:44px;
+    border-radius:11px;
+}
+.gm-reporte-icono--grande .gm-reporte-icono-svg{
+    width:24px;
+    height:24px;
+}
+.gm-reporte-detalle-titulo h1{
+    margin:0!important;
+}
+.gm-productos-detalle .gm-producto-resumen-card{
+    border-top:3px solid var(--gm-combacento,#08752b);
+    background:var(--gm-combfondo,#fff);
+}
+.gm-tabla-reporte .tabla-datos{
+    font-size:12.5px;
+}
+.gm-tabla-reporte .tabla-datos th{
+    font-size:10px;
+}
+
+@media (max-width:1250px){
+    .gm-grid-reportes{grid-template-columns:repeat(3,minmax(190px,1fr))}
+}
+@media (max-width:1020px){
+    .gm-form-tanque-compacto{grid-template-columns:minmax(200px,1.3fr) repeat(3,minmax(125px,1fr))}
+    .gm-grid-reportes{grid-template-columns:repeat(2,minmax(200px,1fr))}
+}
+@media (max-width:760px){
+    .gm-form-tanque-compacto{grid-template-columns:1fr 1fr}
+    .gm-desglose-salidas-grid{grid-template-columns:1fr}
+    .gm-desglose-salidas,.gm-acciones-tanque{max-width:none}
+    .gm-grid-reportes{grid-template-columns:1fr}
+    .gm-col-acciones,.gm-celda-acciones{width:auto;min-width:0}
+    .gm-acciones-caja{justify-content:flex-start}
+    .gm-boton-tabla{min-height:34px}
+    .gm-producto-chip-metrica{min-width:105px}
+}
+@media (max-width:520px){
+    .gm-form-tanque-compacto{grid-template-columns:1fr}
+    .gm-modal-acciones{flex-direction:column-reverse}
+    .gm-modal-acciones .boton{width:100%}
+}

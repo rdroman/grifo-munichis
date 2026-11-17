@@ -1,0 +1,18 @@
+/* Grifo Munichis · Paginación de los 13 detalles de reportes · v1.1 */
+.gm-tabla-reporte{scroll-margin-top:14px}
+.gm-tabla-reporte .tarjeta-cabecera{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.gm-paginacion-orden{font-size:.72rem;color:#657970;margin:4px 0 0}
+.gm-paginacion-tamano{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:.79rem;color:#315144}
+.gm-paginacion-tamano label{font-weight:700;white-space:nowrap}
+.gm-paginacion-tamano select{min-width:73px;min-height:34px;padding:6px 9px;background:#fff;border:1px solid #c8d8d0;border-radius:8px;color:#193c2b;font:inherit;cursor:pointer}
+.gm-paginacion-tamano select:focus-visible,.gm-pagina:focus-visible,.gm-paginacion-aplicar:focus-visible{outline:2px solid #13814a;outline-offset:2px}
+.gm-paginacion-aplicar{border:1px solid #bad7c5;border-radius:7px;background:#f5faf6;padding:6px 12px;color:#166b3f;min-height:34px;cursor:pointer;font-weight:700;font-size:.75rem}
+.gm-paginacion-pie{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:12px 15px;border-top:1px solid #e7eee9}
+.gm-paginacion-conteo{margin:0;color:#50695a;font-size:.77rem}
+.gm-paginacion-enlaces{display:flex;align-items:center;justify-content:flex-end;gap:5px;flex-wrap:wrap}
+.gm-pagina{display:inline-flex;align-items:center;justify-content:center;min-width:33px;min-height:32px;padding:5px 9px;border:1px solid #d7e4da;border-radius:7px;color:#1a6941;background:#fff;text-decoration:none;font-size:.76rem;font-weight:700}
+.gm-pagina:hover{border-color:#77b68f;background:#eef8f1;color:#15542e}
+.gm-pagina--actual{color:#fff!important;background:#08753b!important;border-color:#08753b!important}
+.gm-pagina--puntos,.gm-pagina--inactiva{color:#9bada0;background:#f7f9f7;cursor:default}
+.gm-pagina--puntos{border-color:transparent;background:transparent}
+@media(max-width:650px){.gm-paginacion-pie{justify-content:center}.gm-paginacion-conteo{text-align:center}.gm-tabla-reporte .tarjeta-cabecera{align-items:flex-start}.gm-paginacion-tamano{width:100%}}

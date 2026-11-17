@@ -1,0 +1,218 @@
+.munichis-cuenta-seguridad {
+    width: min(100%, 640px);
+    min-width: 0;
+    margin-inline: auto;
+    padding-block: 8px 24px;
+    display: grid;
+    gap: 16px;
+}
+
+.munichis-seguridad-cabecera,
+.munichis-seguridad-tarjeta > h1,
+.munichis-seguridad-tarjeta > h2,
+.munichis-seguridad-texto {
+    text-align: center;
+}
+
+.munichis-seguridad-cabecera h1,
+.munichis-seguridad-tarjeta > h1,
+.munichis-seguridad-tarjeta > h2 {
+    margin: 0;
+    color: var(--gris-950, #101828);
+    line-height: 1.2;
+}
+
+.munichis-seguridad-cabecera h1,
+.munichis-seguridad-tarjeta > h1 {
+    font-size: clamp(1.35rem, 4vw, 1.75rem);
+}
+
+.munichis-seguridad-tarjeta > h2 {
+    font-size: 1.18rem;
+}
+
+.tarjeta.munichis-seguridad-tarjeta {
+    box-sizing: border-box;
+    padding: clamp(16px, 5vw, 30px);
+    min-width: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.munichis-seguridad-texto {
+    margin: 0;
+    color: var(--gris-700, #475467);
+    line-height: 1.5;
+}
+
+.munichis-seguridad-formulario {
+    width: min(100%, 420px);
+    margin: 0 auto;
+    display: grid;
+    gap: 16px;
+}
+
+.munichis-seguridad-formulario .campo-formulario {
+    min-width: 0;
+    display: grid;
+    gap: 6px;
+}
+
+.munichis-seguridad-formulario .campo-formulario > input,
+.munichis-seguridad-formulario .munichis-clave > input {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 9px 12px;
+    border: 1px solid var(--gris-400, #d0d5dd);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.munichis-seguridad-formulario .munichis-clave > input {
+    padding-inline-end: 49px;
+}
+
+.munichis-clave {
+    position: relative;
+}
+
+.munichis-seguridad-tarjeta button.munichis-ojo {
+    position: absolute;
+    inset-block: 3px;
+    inset-inline-end: 3px;
+    width: 42px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--azul-700, #285ea8);
+    cursor: pointer;
+}
+
+.munichis-seguridad-tarjeta button.munichis-ojo:hover {
+    background: var(--azul-100, #eaf2ff);
+}
+
+.munichis-ojo svg {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+.munichis-ojo[aria-pressed="false"] .munichis-ojo-tachado {
+    display: none;
+}
+
+.munichis-seguridad-tarjeta [hidden] {
+    display: none !important;
+}
+
+.munichis-medidor {
+    --munichis-nivel-color: #a22e31;
+    display: grid;
+    gap: 4px;
+}
+
+.munichis-medidor[data-nivel="2"] { --munichis-nivel-color: #9c6500; }
+.munichis-medidor[data-nivel="3"] { --munichis-nivel-color: #0865a7; }
+.munichis-medidor[data-nivel="4"] { --munichis-nivel-color: #08752b; }
+
+.munichis-medidor-etiqueta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: .82rem;
+}
+
+.munichis-medidor [data-munichis-nivel-texto] {
+    color: var(--munichis-nivel-color);
+    font-weight: 700;
+}
+
+.munichis-medidor:not([data-nivel]) [data-munichis-nivel-texto] {
+    color: var(--gris-700, #475467);
+}
+
+.munichis-medidor progress {
+    width: 100%;
+    height: 7px;
+    border: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    appearance: none;
+    background: #e4ebe7;
+    color: var(--munichis-nivel-color);
+}
+
+.munichis-medidor progress::-webkit-progress-bar { background: #e4ebe7; }
+.munichis-medidor progress::-webkit-progress-value { background: var(--munichis-nivel-color); }
+.munichis-medidor progress::-moz-progress-bar { background: var(--munichis-nivel-color); }
+
+.munichis-seguridad-detalle {
+    width: min(100%, 420px);
+    margin-inline: auto;
+    text-align: center;
+}
+
+.munichis-seguridad-detalle summary {
+    cursor: pointer;
+    color: var(--azul-700, #285ea8);
+}
+
+.munichis-seguridad-detalle .munichis-seguridad-formulario {
+    margin-block-start: 16px;
+    text-align: left;
+}
+
+.munichis-seguridad-detalle code {
+    overflow-wrap: anywhere;
+}
+
+.munichis-seguridad-qr {
+    box-sizing: content-box;
+    display: block;
+    width: min(100%, 236px);
+    height: auto;
+    margin-inline: auto;
+    border: 1px solid var(--gris-400, #d0d5dd);
+    border-radius: 8px;
+    image-rendering: pixelated;
+}
+
+.munichis-seguridad-tarjeta .munichis-seguridad-boton {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 44px;
+    white-space: normal;
+    text-align: center;
+}
+
+body.munichis-verificacion-pagina {
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0;
+    padding: clamp(12px, 4vw, 28px);
+    display: grid;
+    place-items: center;
+    background: var(--verde-050, #f2fbf4);
+}
+
+.munichis-verificacion-tarjeta {
+    width: min(100%, 470px);
+}
+
+body.munichis-verificacion-pagina .munichis-verificacion-tarjeta button.munichis-seguridad-boton.munichis-verificacion-volver {
+    background: var(--azul-100, #eaf2ff);
+    border-color: #bad5e8;
+    color: var(--azul-700, #285ea8);
+}
+
+body.munichis-verificacion-pagina .munichis-verificacion-tarjeta button.munichis-seguridad-boton.munichis-verificacion-volver:hover {
+    background: #d8ebf8;
+    border-color: var(--azul-700, #285ea8);
+}
